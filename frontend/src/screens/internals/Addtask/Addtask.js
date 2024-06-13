@@ -84,8 +84,8 @@ const Addtask = () => {
 
     // Implement database integration logic here
     // Example using axios (replace with your preferred method)
-    console.log("submitting" , station_name);
-    
+    console.log("submitting", station_name);
+
     try {
       const response = await axios.post(`${baseUrl}/api/task/station`, {
         station_name,
@@ -151,32 +151,22 @@ const Addtask = () => {
               <div className="screen-title title-large">Add task</div>
 
               <form className="addtask-form" onSubmit={handleSubmitStation}>
-                {/* <label htmlFor="station">Station:</label>
-                <select
-                  id="station"
-                  value={station_name}
-                  onChange={(e) => setStation_name(e.target.value)}
-                >
-                  <option value="">Select Station</option>
-                  {/* Replace with your actual station options */}
-                {/* <option value="stationA">Station A</option>
-                  <option value="stationB">Station B</option>
-                  <option value="stationC">Station C</option> */}
-                {/* </select> */}
-
                 <label htmlFor="todayTask">Station</label>
-                <input
-                  type="text"
-                  id="station"
-                  value={station_name}
-                  onChange={(e) => setStation_name(e.target.value)}
-                  required
-                  className="addtask-input"
-                />
-                <button type="submit" className="addtask-submit">
-                  Submit
-                </button>
-                <h3>Stations Table</h3>
+                <div>
+                  <input
+                    type="text"
+                    id="station"
+                    value={station_name}
+                    onChange={(e) => setStation_name(e.target.value)}
+                    required
+                    className="addtask-input"
+                  />
+                  <button type="submit" className="addtask-submit">
+                    Submit
+                  </button>
+                </div>
+
+                <h4>Stations Table</h4>
                 <table>
                   <thead>
                     <tr>
@@ -199,6 +189,9 @@ const Addtask = () => {
 
               <form className="addtask-form" onSubmit={handleSubmitTodayPlan}>
                 <label htmlFor="todayTask">Today's Task:</label>
+                <div>
+
+               
                 <input
                   type="text"
                   id="todayTask"
@@ -211,8 +204,8 @@ const Addtask = () => {
                 <button type="submit" className="addtask-submit">
                   Submit
                 </button>
-
-                <h3>Tasks Table</h3>
+                </div>
+                <h4>Tasks Table</h4>
                 {/* Check for empty data before rendering the tasks table */}
                 {/* {renderEmptyMessage(tasks)} */}
                 <table>
@@ -221,7 +214,6 @@ const Addtask = () => {
                       {/* Add table headers based on your tasks data structure */}
                       <th className="sr-no">Sr.no</th>
                       <th className="station-name">Task Name</th>
-                      
                     </tr>
                   </thead>
                   <tbody>
@@ -246,6 +238,7 @@ const Addtask = () => {
                 onSubmit={handleSubmitTommorowPlan}
               >
                 <label htmlFor="tomorrowPlan">Tomorrow's Plan:</label>
+                <div>
                 <input
                   type="text"
                   id="tomorrowPlan"
@@ -258,8 +251,8 @@ const Addtask = () => {
                 <button type="submit" className="addtask-submit">
                   Submit
                 </button>
-
-                <h3>Tomorrow's Schedule Table</h3>
+                </div>
+                <h4>Tomorrow's Schedule Table</h4>
                 {/* Check for empty data before rendering the tommorow table */}
                 {/* {renderEmptyMessage(tommorow)} */}
                 <table>

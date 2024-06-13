@@ -13,7 +13,29 @@
     margin-bottom: 5px; // Adjust label margin
   }
   
-  .addtask-input,
+  .addtask-input {
+    flex: 2;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 10px; // Space between input and button
+  }
+
+  .addtask-submit {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
   .addtask-select {
     padding: 0.5rem;
     border: 1px solid #ccc;
