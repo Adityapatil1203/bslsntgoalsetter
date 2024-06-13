@@ -655,7 +655,7 @@ app.post('/api/tasks', async (req, res) => {
 
 
   app.get('/api/task/station', (req, res) => {
-	const q = 'SELECT * FROM station';
+	const q = 'SELECT * FROM bslsntstation';
 
 	db.query(q, (err, data) => {
 		if (err) {
@@ -677,7 +677,7 @@ app.post('/api/tasks', async (req, res) => {
 	  const escapedStationName = db.escape(station_name);
   
 	  // Insert station into the database
-	   await db.query('INSERT INTO station (station_name) VALUES (?)', [escapedStationName]);
+	   await db.query('INSERT INTO bslsntstation (station_name) VALUES (?)', [escapedStationName]);
   
 	  // Extract relevant data from the result
 	
@@ -708,7 +708,7 @@ app.post('/api/tasks', async (req, res) => {
 //   });
 
   app.get('/api/task/today', (req, res) => {
-	const q = 'SELECT * FROM today_plan';
+	const q = 'SELECT * FROM bslsnttodaytask';
 
 	db.query(q, (err, data) => {
 		if (err) {
@@ -732,7 +732,7 @@ app.post('/api/tasks', async (req, res) => {
 	  const escapedTodayTask = db.escape(todayTask);
   
 	  // Insert station into the database
-	   await db.query('INSERT INTO today_plan (today_plan) VALUES (?)', [escapedTodayTask]);
+	   await db.query('INSERT INTO bslsnttodaytask (today_task) VALUES (?)', [escapedTodayTask]);
   
 	  // Extract relevant data from the result
 	
@@ -747,7 +747,7 @@ app.post('/api/tasks', async (req, res) => {
 
 
   app.get('/api/task/tommorow', (req, res) => {
-	const q = 'SELECT * FROM tommorow_plan';
+	const q = 'SELECT * FROM bslsnttomorrowplan';
 
 	db.query(q, (err, data) => {
 		if (err) {
@@ -770,7 +770,7 @@ app.post('/api/tasks', async (req, res) => {
 	  const escapedTomorrowPlan = db.escape(tommorow_plan);
   
 	  // Insert station into the database
-	   await db.query('INSERT INTO tommorow_plan (tommorow_plan) VALUES (?)', [escapedTomorrowPlan]);
+	   await db.query('INSERT INTO bslsnttomorrowplan (tomorrow_plan) VALUES (?)', [escapedTomorrowPlan]);
   
 	  // Extract relevant data from the result
 	
