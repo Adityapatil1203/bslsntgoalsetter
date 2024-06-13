@@ -1,0 +1,71 @@
+.addtask-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; // Adjust spacing between elements
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f5f5f5; // Light background
+  }
+  
+  .addtask-label {
+    font-weight: bold;
+    margin-bottom: 5px; // Adjust label margin
+  }
+  
+  .addtask-input,
+  .addtask-select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; // Adjust font size
+    width: 100%; // Make inputs full width
+  }
+  
+  .addtask-select {
+    /* Additional styles for dropdown menu if needed */
+  }
+  
+  .addtask-submit {
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50; /* Green button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .addtask-submit:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+  }
+
+
+  /* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Remove borders between cells */
+}
+
+th, td {
+  padding: 10px; /* Add padding for cells */
+  border: 1px solid #ddd; /* Add thin borders */
+  text-align: left; /* Align content to the left */
+}
+
+th {
+  background-color: #f2f2f2; /* Light gray background for headers */
+}
+
+.sr-no {
+  width: 50px; /* Set a specific width for the Sr.no column */
+  text-align: center; /* Center align Sr.no content */
+}
+
+.station-name {
+  width: 200px; /* Set a specific width for the Station Name column */
+}
+
+/* Add more styles for other columns or table elements as needed */
+
+  

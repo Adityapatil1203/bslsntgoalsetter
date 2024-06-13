@@ -1,0 +1,194 @@
+//------------------------------------------------------------------------------------
+
+button {
+    cursor: unset;
+}
+
+//------------------------------------------------------------------------------------
+
+.navigation-button {
+    height: 40px;
+    width: fit-content;
+    padding: 0 24px 0 24px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.10px;
+    background-color: unset;
+    color: var(--on-surface-variant);
+}
+
+.navigation-button.active {
+    background-color: var(--secondary-container) !important;
+    color: var(--on-secondary-container) !important;
+}
+
+//------------------------------------------------------------------------------------
+
+.outlined-button {
+    height: 40px;
+    width: fit-content;
+    padding: 0 24px 0 24px;
+    border-radius: 20px;
+    border: 1px solid var(--outline);
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.10px;
+    background-color: unset;
+    color: var(--primary);
+}
+
+//------------------------------------------------------------------------------------
+
+.filled-button {
+    height: 40px;
+    width: fit-content;
+    padding: 0 24px 0 24px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.10px;
+    background-color: var(--primary);
+    color: var(--on-primary);
+}
+
+//------------------------------------------------------------------------------------
+
+.text-button {
+    height: 40px;
+    width: fit-content;
+    padding: 0 24px 0 24px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.10px;
+    background-color: unset;
+    color: var(--primary);
+}
+
+//------------------------------------------------------------------------------------
+
+.icon-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: unset;
+    display: grid;
+    place-content: center;
+
+    svg {
+        fill: var(--on-surface-variant);
+    }
+}
+
+//------------------------------------------------------------------------------------
+
+.sort-button {
+    height: 24px;
+    width: 40px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background-color: unset;
+
+    svg {
+        fill: var(--on-surface-variant);
+    }
+}
+
+//------------------------------------------------------------------------------------
+
+.filled-tonal-button {
+    height: 40px;
+    width: fit-content;
+    padding: 0 24px 0 24px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.10px;
+    background-color: var(--secondary-container);
+    color: var(--on-secondary-container);
+}
+
+//------------------------------------------------------------------------------------
+
+::-webkit-file-upload-button {
+    height: 40px;
+    width: fit-content;
+    padding: 0 24px 0 24px;
+    border-radius: 20px;
+    border: 1px solid var(--outline);
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.10px;
+    background-color: unset;
+    color: var(--primary);
+}
+
+//------------------------------------------------------------------------------------
+
+@media (hover:hover) {
+    button {
+        cursor: pointer;
+    }
+
+    .navigation-button:hover {
+        background-color: var(--hover);
+    }
+
+    .outlined-button:hover {
+        background-color: var(--hover);
+    }
+
+    .icon-button:hover {
+        background-color: var(--hover);
+    }
+
+    .sort-button:hover {
+        background-color: var(--hover);
+    }
+}
+
+//------------------------------------------------------------------------------------
+
+@media (hover:none) {
+    button {
+        cursor: default;
+    }
+
+    .navigation-button:active {
+        background-color: var(--hover);
+    }
+
+    .outlined-button:active {
+        background-color: var(--hover);
+    }
+
+    .icon-button:active {
+        background-color: var(--hover);
+    }
+
+    .sort-button:active {
+        background-color: var(--hover);
+    }
+}
+
+//------------------------------------------------------------------------------------

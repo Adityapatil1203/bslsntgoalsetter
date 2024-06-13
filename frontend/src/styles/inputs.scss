@@ -1,0 +1,87 @@
+//------------------------------------------------------------------------------------
+
+.inputfield {
+    height: 56px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--outline);
+    padding: 0 16px 0 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.50px;
+    outline: none;
+    background-color: unset;
+    color: var(--on-surface);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.inputfield.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.inputarea {
+    min-height: 82px;
+    max-height: calc(82px * 2);
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--outline);
+    padding: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.50px;
+    outline: none;
+    background-color: unset;
+    color: var(--on-surface);
+    transition: none;
+    resize: vertical;
+}
+
+.input-hints {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.40px;
+    padding: 4px 0 0 0;
+}
+
+//------------------------------------------------------------------------------------
+
+.input-container {
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+        transition: none;
+        border: 2px solid var(--primary);
+    }
+
+    .input-hints {
+        color: var(--on-surface-variant);
+    }
+}
+
+.input-container.error {
+
+    input,
+    textarea {
+        border: 1px solid var(--error);
+    }
+
+    input:focus,
+    textarea:focus {
+        transition: none;
+        border: 2px solid var(--error);
+    }
+
+    .input-hints {
+        color: var(--error);
+    }
+}
+
+//------------------------------------------------------------------------------------

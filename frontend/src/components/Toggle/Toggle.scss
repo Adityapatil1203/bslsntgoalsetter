@@ -1,0 +1,39 @@
+//------------------------------------------------------------------------------------
+
+.toggle-container {
+    height: 24px;
+    width: 48px;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 1px 1px var(--on-background);
+
+    .toggle {
+        height: 16px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        box-shadow: 0 1px 1px var(--on-background);
+    }
+}
+
+.toggle-container.on {
+    justify-content: right;
+    background-color: var(--success);
+
+    .toggle {
+        background-color: var(--on-success);
+    }
+}
+
+.toggle-container.off {
+    justify-content: left;
+    background-color: var(--error);
+
+    .toggle {
+        background-color: var(--on-error);
+    }
+}
+
+//------------------------------------------------------------------------------------

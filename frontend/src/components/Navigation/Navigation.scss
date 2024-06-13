@@ -1,0 +1,18 @@
+//------------------------------------------------------------------------------------
+
+.side-navigation {
+    height: calc(100vh - 64px);
+    width: 200px;
+    background-color: var(--surface);
+    padding: calc(var(--space) - 8px);
+    z-index: 2;
+    // box-shadow: 1px 0 2px var(--shadow);
+
+    .navigation-button {
+        width: 100%;
+        text-align: left;
+        margin: 0 0 calc(var(--space) / 4) 0;
+    }
+}
+
+//------------------------------------------------------------------------------------

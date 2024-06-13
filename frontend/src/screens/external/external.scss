@@ -1,0 +1,473 @@
+//------------------------------------------------------------------------------------
+
+
+.external-screen {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    position: relative;
+    padding: calc(var(--space) * 2) 0 calc(var(--space) * 2) 0;
+
+    .frame {
+        height: fit-content;
+        width: 600px;
+
+        .outlined-card {
+            padding: var(--space);
+
+            .app-title {
+                color: var(--primary);
+                margin: 0 0 var(--space) 0;
+            }
+
+            .login-toggle-container {
+                width: 100%;
+                border-radius: 24px;
+                border: 1px solid var(--outline);
+                margin: 0 0 var(--space) 0;
+                display: flex;
+                align-items: center;
+                padding: 4px;
+                gap: 4px;
+
+                .user {
+                    height: 40px;
+                    width: 50%;
+                    border-radius: 20px;
+                    display: grid;
+                    place-content: center;
+                    color: var(--on-surface-variant);
+                }
+            }
+
+            .login-toggle-container {
+                .user.active {
+                    background-color: var(--secondary-container) !important;
+                    color: var(--on-secondary-container);
+                }
+            }
+
+            @media (hover: hover) {
+                .login-toggle-container {
+                    .user {
+                        cursor: pointer;
+                    }
+
+                    .user:hover {
+                        background-color: var(--hover);
+                    }
+                }
+            }
+
+            @media (hover: none) {
+                .login-toggle-container {
+                    .user {
+                        cursor: default;
+                    }
+
+                    .user:active {
+                        background-color: var(--hover);
+                    }
+                }
+            }
+
+            .label {
+                color: var(--primary);
+                padding: calc(var(--space) / 4) 0 0 0;
+            }
+
+            .pdf-input.error {
+                border: 1px solid var(--error);
+                color: var(--error);
+                padding: 4px;
+                border-radius: 28px;
+            }
+
+            .pdf-input {
+                margin: calc(var(--space) / 2) 0 0 0;
+            }
+
+            .data-preview {
+                height: 30px;
+                width: fit-content;
+                margin: auto;
+                border-radius: 15px;
+                background-color: var(--secondary-container);
+                padding: 0 16px;
+                display: grid;
+                place-content: center;
+            }
+
+            .inputfield,
+            .inputarea {
+                margin: calc(var(--space) / 4) 0 0 0;
+            }
+
+            .question-container {
+                padding: calc(var(--space) / 2);
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                background-color: var(--surface);
+                border-radius: 8px;
+                justify-content: space-between;
+
+                .question {
+                    color: var(--on-surface-variant);
+                    margin: 0 0 0 calc(var(--space) / 4);
+                }
+
+                .checkbox-options-container {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 0 0 24px;
+
+                    .checkbox-option {
+                        display: flex;
+                        align-items: center;
+                        margin: 0 0 0 16px;
+                        cursor: pointer;
+
+                        .checkbox-label {
+                            color: var(--on-surface-variant);
+                        }
+                    }
+                }
+            }
+
+            .password-inputfield {
+                position: relative;
+                overflow: hidden;
+
+                .password-visibility {
+                    margin: calc(var(--space) / 4) 0 0 0;
+                    height: 52px;
+                    width: 52px;
+                    display: grid;
+                    place-content: center;
+                    position: absolute;
+                    top: 2px;
+                    right: 2px;
+                    background-color: var(--surface);
+                    border-radius: 1px;
+                }
+            }
+
+            .bottom-label {
+                color: var(--on-surface-variant);
+                text-align: center;
+                padding: 4px 0 0 0;
+            }
+
+            .images-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .content-1 {
+                    width: 30%;
+
+                    .add-profile-photo {
+                        aspect-ratio: 3 / 4;
+                        border-radius: 4px;
+                        border: 1px dashed var(--on-surface-variant);
+                        display: grid;
+                        place-content: center;
+                        cursor: pointer;
+                        transition: none;
+
+                        svg {
+                            fill: var(--on-surface-variant);
+                        }
+                    }
+
+                    .profile-photo-container {
+                        position: relative;
+
+                        .profile-photo {
+                            aspect-ratio: 3 / 4;
+                            border-radius: 4px;
+                            background-color: var(--disabled);
+                            width: 100%;
+                            border: 1px solid var(--surface-variant);
+                            border-radius: 4px;
+                        }
+
+                        .icon-button {
+                            position: absolute;
+                            top: 4px;
+                            right: 4px;
+                        }
+                    }
+                }
+
+                .content-1.error {
+                    .add-profile-photo {
+                        border: 1px dashed var(--error);
+                    }
+
+                    .bottom-label {
+                        color: var(--error);
+                    }
+                }
+
+                .content-2 {
+                    width: 70%;
+                    margin: 0 0 0 var(--space);
+
+                    .add-id-proof {
+                        aspect-ratio: 7 / 4;
+                        border-radius: 4px;
+                        border: 1px dashed var(--on-surface-variant);
+                        display: grid;
+                        place-content: center;
+                        cursor: pointer;
+                        transition: none;
+
+                        svg {
+                            fill: var(--on-surface-variant);
+                        }
+                    }
+
+                    .id-proof-container {
+                        position: relative;
+
+                        .id-proof {
+                            aspect-ratio: 7 / 4;
+                            border-radius: 4px;
+                            background-color: var(--disabled);
+                            width: 100%;
+                            border: 1px solid var(--surface-variant);
+                            border-radius: 4px;
+                        }
+
+                        .icon-button {
+                            position: absolute;
+                            top: 4px;
+                            right: 4px;
+                        }
+                    }
+                }
+
+                .content-2.error {
+                    .add-id-proof {
+                        border: 1px dashed var(--error);
+                    }
+
+                    .bottom-label {
+                        color: var(--error);
+                    }
+                }
+            }
+
+            .shop-images-container {
+                --width: calc((100% - (var(--space) * 2)) / 3);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                column-gap: var(--space);
+                margin: calc(var(--space) / 2) 0 0 0;
+
+                .content-1 {
+                    width: var(--width);
+                    aspect-ratio: 1 / 1;
+
+                    .add-shop-photo {
+                        height: 100%;
+                        border-radius: 4px;
+                        border: 1px dashed var(--on-surface-variant);
+                        display: grid;
+                        place-content: center;
+                        cursor: pointer;
+                        transition: none;
+
+                        svg {
+                            fill: var(--on-surface-variant);
+                        }
+                    }
+
+                    .shop-photo-container {
+                        position: relative;
+
+                        .shop-photo {
+                            aspect-ratio: 1 / 1;
+                            border-radius: 4px;
+                            background-color: var(--disabled);
+                            width: 100%;
+                            border: 1px solid var(--surface-variant);
+                            border-radius: 4px;
+                        }
+
+                        .icon-button {
+                            position: absolute;
+                            top: 4px;
+                            right: 4px;
+                        }
+                    }
+                }
+
+                .content-1.error {
+                    .add-shop-photo {
+                        border: 1px dashed var(--error);
+                    }
+
+                    .bottom-label {
+                        color: var(--error);
+                    }
+                }
+
+                .content-2 {
+                    width: var(--width);
+                    aspect-ratio: 1 / 1;
+
+                    .add-shop-sign-photo {
+                        height: 100%;
+                        border-radius: 4px;
+                        border: 1px dashed var(--on-surface-variant);
+                        display: grid;
+                        place-content: center;
+                        cursor: pointer;
+                        transition: none;
+
+                        svg {
+                            fill: var(--on-surface-variant);
+                        }
+                    }
+
+                    .signature-photo-container {
+                        position: relative;
+
+                        .signature-photo {
+                            aspect-ratio: 1 / 1;
+                            border-radius: 4px;
+                            background-color: var(--disabled);
+                            width: 100%;
+                            border: 1px solid var(--surface-variant);
+                            border-radius: 4px;
+                        }
+
+                        .icon-button {
+                            position: absolute;
+                            top: 4px;
+                            right: 4px;
+                        }
+                    }
+                }
+
+                .content-2.error {
+                    .add-shop-sign-photo {
+                        border: 1px dashed var(--error);
+                    }
+
+                    .bottom-label {
+                        color: var(--error);
+                    }
+                }
+
+                .content-3 {
+                    width: var(--width);
+                    aspect-ratio: 1 / 1;
+
+                    .add-shop-stamp-photo {
+                        height: 100%;
+                        border-radius: 4px;
+                        border: 1px dashed var(--on-surface-variant);
+                        display: grid;
+                        place-content: center;
+                        cursor: pointer;
+                        transition: none;
+
+                        svg {
+                            fill: var(--on-surface-variant);
+                        }
+                    }
+
+                    .shop-stamp-container {
+                        position: relative;
+
+                        .shop-stamp {
+                            aspect-ratio: 1 / 1;
+                            border-radius: 4px;
+                            background-color: var(--disabled);
+                            width: 100%;
+                            border: 1px solid var(--surface-variant);
+                            border-radius: 4px;
+                        }
+
+                        .icon-button {
+                            position: absolute;
+                            top: 4px;
+                            right: 4px;
+                        }
+                    }
+                }
+
+                .content-3.error {
+                    .add-shop-stamp-photo {
+                        border: 1px dashed var(--error);
+                    }
+
+                    .bottom-label {
+                        color: var(--error);
+                    }
+                }
+            }
+
+            .two-inputs-container {
+                display: grid;
+                grid-template-columns: auto auto;
+                column-gap: calc(var(--space) - 4px);
+            }
+
+            .date-input.error {
+                .bottom-label {
+                    color: var(--error);
+                }
+            }
+
+            .bottom-buttons {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: calc(var(--space) / 2) 0 0 -24px;
+            }
+        }
+    }
+}
+
+//------------------------------------------------------------------------------------
+
+@media screen and (max-width: 840px) {
+    .external-screen {
+        padding: calc(var(--space) * 2) 0 calc(var(--space) * 2) 0;
+
+        .frame {
+            width: 600px;
+        }
+    }
+}
+
+//------------------------------------------------------------------------------------
+
+@media screen and (max-width: 600px) {
+    .external-screen {
+        display: block;
+        min-height: 125vw;
+
+        .frame {
+            width: 100vw;
+
+            .outlined-card {
+                border: none;
+
+                .action-title {
+                    color: var(--on-surface-variant);
+                    margin: var(--space) 0 var(--space) 0;
+                }
+            }
+        }
+    }
+}
+
+//------------------------------------------------------------------------------------
