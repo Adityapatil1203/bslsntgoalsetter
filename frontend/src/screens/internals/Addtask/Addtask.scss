@@ -36,6 +36,19 @@
     }
   }
 
+  .edit-delete{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .edit-delete > .ed-dl{
+    border: 2px solid black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
   .addtask-select {
     padding: 0.5rem;
     border: 1px solid #ccc;
